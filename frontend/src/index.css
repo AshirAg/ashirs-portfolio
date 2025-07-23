@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    /* ==================== colors ==================== */
+    --bg-primary: 0;
+    --bg-space: 0;
+    --bg-hover: 0;
+
+    --text-primary: 0;
+    --text-secondary: 0;
+    --text-muted: 0;
+
+    --border-primary: 0;
+    --border-hover: 0;
+
+    --accent-primary: 0;
+    --accent-hover: 0;
+
+    /* ==================== fonts ==================== */
+    --heading-font: 0;
+    --body-font: 0;
+
+    --heading-lg: 0;
+    --heading-md: 0;
+    --heading-sm: 0;
+
+    --body-lg: 0;
+    --body-md: 0;
+    --body-sm: 0;
+
+    /* ==================== border radius ==================== */
+    --border-rad-lg: 0;
+    --border-rad-md: 0;
+    --border-rad-sm: 0;
+
+    /* ==================== spacing ==================== */
+    --spacing-xl5: 0;
+    --spacing-xl4: 0;
+    --spacing-xl3: 0;
+    --spacing-xl2: 0;
+    --spacing-xl: 0;
+    --spacing-lg: 0;
+    --spacing-md: 0;
+    --spacing-sm: 0;
+
+}
