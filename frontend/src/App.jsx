@@ -4,6 +4,7 @@ import AppLayout from './layout/AppLayout';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Projects from './pages/Projects';
+import Test from './pages/Test.jsx';
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       },
       
     ]
+  },
+  {
+    path: '/test',
+    element: <Test/>,
   },
 ]);
 
