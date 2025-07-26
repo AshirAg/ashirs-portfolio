@@ -5,23 +5,23 @@
 }
 :root{
     /* ==================== colors ==================== */
-    --bg-primary: 0;
-    --bg-space: 0;
-    --bg-hover: 0;
+    --bg-primary: #0F0F0F;
+    --bg-space: #141414;
+    --bg-hover: #595959;
 
-    --text-primary: 0;
-    --text-secondary: 0;
-    --text-muted: 0;
+    --text-primary: #ffffff;
+    --text-secondary: #E6E6E6;
+    --text-muted: #999999;
 
-    --border-primary: 0;
-    --border-hover: 0;
+    --border-primary: #595959;
+    --border-hover: #CCCCCC;
 
-    --accent-primary: 0;
-    --accent-hover: 0;
+    --accent-primary: #FFFFFF;
+    --accent-hover: #CCCCCC;
 
     /* ==================== fonts ==================== */
-    --heading-font: 0;
-    --body-font: 0;
+    --heading-font: "Space Grotesk";
+    --body-font: "DM Sans";
 
     --heading-lg: 0;
     --heading-md: 0;
@@ -36,6 +36,9 @@
     --border-rad-md: 0;
     --border-rad-sm: 0;
 
+    /* ==================== border width ==================== */
+    --border-width: 1px;
+
     /* ==================== spacing ==================== */
     --spacing-xl5: 0;
     --spacing-xl4: 0;
@@ -46,4 +49,20 @@
     --spacing-md: 0;
     --spacing-sm: 0;
 
+}
+*{
+    transition: all 150ms ease-in-out;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--heading-font);
+}
+body{
+    font-family: var(--body-font);
+    background-color: var(--bg-primary);
+}
+
+#root{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }

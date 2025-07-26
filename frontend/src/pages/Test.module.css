@@ -1,0 +1,60 @@
+body{
+    margin: 3rem;
+    display: flex;
+}
+
+/* ============= primary button ============= */
+.button_primary{
+    display: flex;
+    align-items: center;
+    border: var(--border-width) solid var(--border-primary);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    cursor: pointer;
+    flex-grow: 1;
+    
+    
+    /* measuring / testing / passed */
+    padding: 0.5rem 1rem;
+    border-radius: 0.4rem;
+    font-size: 14px;
+    gap: 0.5rem;
+}
+.button_primary:hover{
+    background-color: var(--bg-hover);
+}
+
+/* ============= secondary button ============= */
+.button_secondary{
+    border: var(--border-width) solid var(--accent-primary);
+    background-color: var(--accent-primary);
+    color: var(--bg-primary);
+    cursor: pointer;
+    
+    /* measuring / testing / passed */
+    padding: 0.5rem 1rem;
+    border-radius: 0.4rem;
+    font-size: 14px;
+}
+.button_secondary:hover{
+    background-color: var(--accent-hover);
+    border-color: var(--accent-hover);
+}
+
+.sm{
+    font-size: 12px;
+    max-width: fit-content;
+}
+
+.md{
+    max-width: fit-content;
+}
+
+
+
+
+.test{
+    display: flex;
+    gap: 0.5rem;
+    width: 100%;
+}
