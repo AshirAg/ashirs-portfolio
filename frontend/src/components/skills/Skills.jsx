@@ -84,7 +84,7 @@ function Skills() {
         {
             image: phpImg,
             title: 'PHP',
-            desc: 'Fullstack/Backend',
+            desc: 'Backend Language',
             ratings: 5.5,
         },
         {
