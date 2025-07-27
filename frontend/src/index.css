@@ -23,10 +23,11 @@
     --heading-font: "Space Grotesk";
     --body-font: "DM Sans";
 
-    --heading-lg: 30px;
-    --heading-md: 26px;
-    --heading-sm: 22px;
+    --heading-lg: 36px;
+    --heading-md: 32px;
+    --heading-sm: 26px;
 
+    --body-xl: 20px;
     --body-lg: 16px;
     --body-md: 14px;
     --body-sm: 12px;
@@ -39,7 +40,7 @@
     --border-rad-vsm: 0.2rem;
 
     /* ==================== border width ==================== */
-    --border-width: 1px;
+    --border-width: 2px;
 
     /* ==================== spacing ==================== */
     --spacing-xl5: 32rem;
@@ -52,7 +53,7 @@
     --spacing-sm: 0.25rem;
 
     /* ==================== container width ==================== */
-    --container-width: 500px;
+    --container-width: 750px;
 
 }
 *{
@@ -62,16 +63,17 @@ body{
     display: flex;
 
     font-family: var(--body-font);
+    font-size: var(--body-lg);
     /* background-color: var(--bg-primary); */
     color: var(--text-primary);
 }
 #root{
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-md);
+    gap: var(--spacing-xl);
     width: 100%;
-    padding: var(--spacing-xl);
     height: 500rem;
+    padding: var(--spacing-xl);
 }
 .section{
     width: 100%;

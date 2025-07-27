@@ -1,4 +1,10 @@
 .profile{
     display: flex;
+    gap: var(--spacing-xl);
+}
+
+.button_container{
+    display: flex;
+    width: 100%;
     gap: var(--spacing-md);
 }

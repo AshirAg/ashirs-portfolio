@@ -1,7 +1,7 @@
 .navbar_section{
-    position: fixed;
+    position: sticky;
     left: 50%;
-    transform: translateX(-50%);
+    top: var(--spacing-xl)
 }
 .links{
     display: flex;

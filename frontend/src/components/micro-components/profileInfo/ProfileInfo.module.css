@@ -1,0 +1,27 @@
+p.location{
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    color: var(--text-muted);
+    font-size: var(--body-md);
+    margin-bottom: var(--spacing-md);
+}
+p.desc{
+    color: var(--text-secondary);
+    font-size: var(--body-lg);
+    margin-bottom: var(--spacing-lg);
+}
+.links{
+    display: flex;
+    gap: var(--spacing-lg);
+    align-items: center;
+}
+.links a{
+    display: flex;
+    font-size: var(--body-lg);
+    color: var(--text-muted);
+}
+.links a:hover{
+    font-size: var(--body-lg);
+    color: var(--text-primary);
+}

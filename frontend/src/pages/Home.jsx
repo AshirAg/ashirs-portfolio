@@ -1,8 +1,9 @@
+import Hero from "../components/hero/Hero.jsx";
 
 
 function Home(){
     return(
-        <h3>Home</h3>
+        <Hero />
     )
 }
 

@@ -12,9 +12,9 @@ function Hero(){
                     <ProfileImage />
                     <ProfileInfo />
                 </div>
-                <div className={styles.button-container}>
-                    <Button />
-                    <Button />
+                <div className={styles.button_container}>
+                    <Button>Hire Me</Button>
+                    <Button>My Projects</Button>
                 </div>
             </div>
         </div>

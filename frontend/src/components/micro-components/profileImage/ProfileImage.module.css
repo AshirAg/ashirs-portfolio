@@ -1,0 +1,21 @@
+.outer_ring{
+    min-width: 250px;
+    width: 250px;
+    aspect-ratio: 1/1;
+    border: 5px solid var(--accent-primary);
+    border-radius: 50%;
+    padding: var(--spacing-sm);
+    overflow: hidden;
+}
+.outer_ring .image_container{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.outer_ring .image_container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
