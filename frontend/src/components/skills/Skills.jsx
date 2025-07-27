@@ -79,13 +79,13 @@ function Skills() {
             image: reactImg,
             title: 'React',
             desc: 'JS FrontEnd Library',
-            ratings: 5,
+            ratings: 5.4,
         },
         {
             image: phpImg,
             title: 'PHP',
             desc: 'Fullstack/Backend',
-            ratings: 5,
+            ratings: 5.5,
         },
         {
             image: bootStrapImg,
