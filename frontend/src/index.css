@@ -33,22 +33,26 @@
     --body-vsm: 10px;
 
     /* ==================== border radius ==================== */
-    --border-rad-lg: 0;
-    --border-rad-md: 0;
-    --border-rad-sm: 0;
+    --border-rad-lg: 0.8rem;
+    --border-rad-md: 0.6rem;
+    --border-rad-sm: 0.4rem;
+    --border-rad-vsm: 0.2rem;
 
     /* ==================== border width ==================== */
     --border-width: 1px;
 
     /* ==================== spacing ==================== */
-    --spacing-xl5: 0;
-    --spacing-xl4: 0;
-    --spacing-xl3: 0;
-    --spacing-xl2: 0;
-    --spacing-xl: 0;
-    --spacing-lg: 0;
-    --spacing-md: 0;
-    --spacing-sm: 0;
+    --spacing-xl5: 32rem;
+    --spacing-xl4: 16rem;
+    --spacing-xl3: 8rem;
+    --spacing-xl2: 4rem;
+    --spacing-xl: 2rem;
+    --spacing-lg: 1rem;
+    --spacing-md: 0.5rem;
+    --spacing-sm: 0.25rem;
+
+    /* ==================== container width ==================== */
+    --container-width: 500px;
 
 }
 *{
@@ -64,7 +68,22 @@ body{
 #root{
     display: flex;
     flex-direction: column;
+    gap: var(--spacing-md);
     width: 100%;
+    padding: var(--spacing-xl);
+    height: 500rem;
+}
+.section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container{
+    width: var(--container-width);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 h1, h2, h3, h4, h5, h6{
     font-family: var(--heading-font);
@@ -77,4 +96,8 @@ h2{
 }
 h3{
     font-size: var(--heading-sm);
+}
+a{
+    text-decoration: none;
+    color: var(--text-primary);
 }

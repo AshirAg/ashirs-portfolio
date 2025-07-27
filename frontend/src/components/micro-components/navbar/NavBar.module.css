@@ -1,0 +1,27 @@
+.navbar_section{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.links{
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    background-color: var(--bg-hover);
+    padding: var(--spacing-sm);
+    border-radius: var(--border-rad-md);
+}
+.links a{
+    display: flex;
+    justify-content: center;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-rad-sm);
+    color: var(--text-secondary);
+}
+.links a:hover{
+    color: var(--text-primary);
+}
+.links a.active{
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
