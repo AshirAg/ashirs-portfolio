@@ -1,12 +1,9 @@
-body{
-    margin: 3rem;
-    display: flex;
-}
 
 /* ============= primary button ============= */
 .button_primary{
     display: flex;
     align-items: center;
+    justify-content: center;
     border: var(--border-width) solid var(--border-primary);
     background-color: var(--bg-primary);
     color: var(--text-primary);
@@ -26,10 +23,14 @@ body{
 
 /* ============= secondary button ============= */
 .button_secondary{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: var(--border-width) solid var(--accent-primary);
     background-color: var(--accent-primary);
     color: var(--bg-primary);
     cursor: pointer;
+    flex-grow: 1;
     
     /* measuring / testing / passed */
     padding: 0.5rem 1rem;
@@ -49,12 +50,27 @@ body{
 .md{
     max-width: fit-content;
 }
-
-
-
-
 .test{
     display: flex;
     gap: 0.5rem;
     width: 100%;
 }
+
+/* =============== card ============== */
+.card{
+    background-color: var(--bg-primary);
+    border-radius: 0.6rem;
+    border: var(--border-width) solid var(--border-primary);
+    padding: 1rem;
+    width: 25%;
+}
+.card .date{
+    font-size: var(--body-vsm);
+    color: var(--text-muted);
+}
+.card .info{
+    font-size: var(--body-md);
+    color: var(--text-secondary);
+}
+
+

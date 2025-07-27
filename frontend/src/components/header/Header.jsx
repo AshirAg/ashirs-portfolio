@@ -1,9 +1,11 @@
-
+import NavBar from '../micro-components/navbar/NavBar'
 
 function Header(){
 
     return(
-        <h3>Header</h3>
+        <>
+        <NavBar />
+        </>
     )
 }
 

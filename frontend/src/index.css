@@ -23,13 +23,14 @@
     --heading-font: "Space Grotesk";
     --body-font: "DM Sans";
 
-    --heading-lg: 0;
-    --heading-md: 0;
-    --heading-sm: 0;
+    --heading-lg: 30px;
+    --heading-md: 26px;
+    --heading-sm: 22px;
 
-    --body-lg: 0;
-    --body-md: 0;
-    --body-sm: 0;
+    --body-lg: 16px;
+    --body-md: 14px;
+    --body-sm: 12px;
+    --body-vsm: 10px;
 
     /* ==================== border radius ==================== */
     --border-rad-lg: 0;
@@ -53,16 +54,27 @@
 *{
     transition: all 150ms ease-in-out;
 }
-h1, h2, h3, h4, h5, h6{
-    font-family: var(--heading-font);
-}
 body{
-    font-family: var(--body-font);
-    background-color: var(--bg-primary);
-}
+    display: flex;
 
+    font-family: var(--body-font);
+    /* background-color: var(--bg-primary); */
+    color: var(--text-primary);
+}
 #root{
     display: flex;
     flex-direction: column;
     width: 100%;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--heading-font);
+}
+h1{
+    font-size: var(--heading-lg);
+}
+h2{
+    font-size: var(--heading-md);
+}
+h3{
+    font-size: var(--heading-sm);
 }

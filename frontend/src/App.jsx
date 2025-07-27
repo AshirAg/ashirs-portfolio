@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Projects from './pages/Projects';
 import Test from './pages/Test.jsx';
+import Space from './components/space/Space.jsx';
 
 const router = createBrowserRouter([
   {
@@ -28,7 +29,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/test',
-    element: <Test/>,
+    element: <><Space></Space><Test/></>,
   },
 ]);
 
