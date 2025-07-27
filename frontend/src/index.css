@@ -5,8 +5,8 @@
 }
 :root{
     /* ==================== colors ==================== */
-    --bg-primary: #0F0F0F;
-    --bg-space: #141414;
+    --bg-primary: hsl(0, 0%, 8%);
+    --bg-space: hsl(0, 0%, 3%);
     --bg-hover: #595959;
 
     --text-primary: #ffffff;
@@ -24,8 +24,8 @@
     --body-font: "DM Sans";
 
     --heading-lg: 36px;
-    --heading-md: 32px;
-    --heading-sm: 26px;
+    --heading-md: 28px;
+    --heading-sm: 22px;
 
     --body-xl: 20px;
     --body-lg: 16px;
