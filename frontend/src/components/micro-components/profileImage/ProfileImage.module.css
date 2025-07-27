@@ -1,6 +1,6 @@
 .outer_ring{
-    min-width: 250px;
-    width: 250px;
+    min-width: 220px;
+    width: 220px;
     aspect-ratio: 1/1;
     border: 5px solid var(--accent-primary);
     border-radius: 50%;
