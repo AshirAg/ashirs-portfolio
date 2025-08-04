@@ -1,4 +1,5 @@
 import styles from './WorkEducation.module.css';
+import OrgInfo from '../micro-components/orgInfo/OrgInfo.jsx';
 
 function WorkEducation() {
 
@@ -9,6 +10,12 @@ function WorkEducation() {
                     <button className={styles.active}>Work</button>
                     <button>Education</button>
                 </div>
+                <div className={styles.box}>
+                    <div className={styles.inner_box}>
+                        <OrgInfo></OrgInfo>
+                    </div>
+                </div>
+                
             </div>
         </div>
     );

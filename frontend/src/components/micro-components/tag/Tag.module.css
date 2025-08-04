@@ -1,0 +1,11 @@
+.tag{
+    font-size: var(--body-md);
+    color: var(--text-primary);
+    background-color: var(--bg-hover);
+    width: max-content;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-rad-sm);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
