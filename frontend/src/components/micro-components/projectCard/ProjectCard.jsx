@@ -2,23 +2,36 @@ import styles from "./ProjectCard.module.css";
 import Tag from "../tag/Tag.jsx";
 import Button from "../button/Button.jsx";
 import { LuLink } from "react-icons/lu";
+import { LuGithub } from "react-icons/lu";
 
-function ProjectCard(){
+function ProjectCard({image, project_name, project_description, stacks, buttons}){
     return(
         <div className={styles.project_card}>
             <div className={styles.img_section}>
                 <div className={styles.img_container}>
-                    <img src="" alt="" />
+                    <img src={image} alt="" />
                 </div>
             </div>
-            <div className="info">
-                <h3 className={styles.project_name}>Jewelry Ecommerce</h3>
-                <p className={styles.description}>Fully functional jewelry eCommerce website with integrated payments and an admin dashboard.</p>
-                <div className="stacks">
-                    <Tag>Figma</Tag>
+            <div className={styles.details}>
+                <div className={styles.info}>
+                    <h3 className={styles.project_name}>{project_name}</h3>
+                    <p className={styles.description}>{project_description}</p>
+                </div>
+                <div className={styles.stacks}>
+                    {stacks.map((item, idx) =>(
+                        <Tag key={idx}>{item}</Tag>
+                    ))}
                 </div>
                 <div className={styles.buttons}>
-                    <Button className="button_secondary sm" icon={<LuLink />}>Visit Site</Button>
+                    {buttons.map((item, idx) =>(
+                        <Button 
+                            className="button_secondary sm" 
+                            icon={item === "Open Source" ? <LuGithub /> : <LuLink />} 
+                            key={idx}
+                        >
+                            {item}
+                        </Button>
+                    ))}
                 </div>
             </div>
         </div>

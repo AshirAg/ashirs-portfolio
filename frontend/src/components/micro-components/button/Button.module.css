@@ -1,6 +1,7 @@
 button{
-    display: flex;
     align-items: center;
+    display: flex;
+    cursor: pointer;
     justify-content: center;
     gap: var(--spacing-md);
     padding: var(--spacing-md) var(--spacing-lg);
@@ -13,7 +14,6 @@ button{
     background-color: var(--bg-primary);
     background-color: transparent;
     color: var(--text-primary);
-    cursor: pointer;
 }
 .button_primary:hover{
     background-color: var(--bg-hover);

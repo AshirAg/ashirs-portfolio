@@ -1,0 +1,13 @@
+.project_container{
+    display: grid;
+    gap: var(--spacing-lg);
+    grid-template-columns: repeat(2, 1fr);
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+@media (max-width: 750px) {
+    .project_container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

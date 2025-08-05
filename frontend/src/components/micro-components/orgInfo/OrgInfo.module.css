@@ -10,6 +10,7 @@
 }
 .org_name{
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     gap: var(--spacing-sm) var(--spacing-lg);
     margin-bottom: var(--spacing-md);

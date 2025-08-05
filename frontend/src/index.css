@@ -52,6 +52,7 @@
     --spacing-lg: 1rem;
     --spacing-md: 0.5rem;
     --spacing-sm: 0.25rem;
+    --spacing-vsm: 0.15rem;
 
     /* ==================== container width ==================== */
     --container-width: 750px;

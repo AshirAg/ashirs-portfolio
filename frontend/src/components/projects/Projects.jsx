@@ -5,7 +5,7 @@ import ProjectsContainer from '../projectsContainer/ProjectsContainer.jsx';
 function Projects(){
     return(
         <div className="section">
-            <div className="container">
+            <div className={`container ${styles.projects_container}`}>
                 <div className={styles.heading}>
                     <h2>Projects</h2>
                     <NavLink to="/projects">
@@ -17,7 +17,7 @@ function Projects(){
 
                     </NavLink>
                 </div>
-                <ProjectsContainer />
+                <ProjectsContainer limit={2} />
             </div>
         </div>
     )
