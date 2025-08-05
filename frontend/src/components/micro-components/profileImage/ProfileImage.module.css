@@ -35,3 +35,9 @@
     transition:  0.6s ease-in-out;
 }
 
+@media (max-width: 600px) {
+    .outer_ring{
+        min-width: 200px;
+        width: 200px;
+    }
+}

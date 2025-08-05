@@ -104,3 +104,22 @@ a{
     text-decoration: none;
     color: var(--text-primary);
 }
+
+@media (max-width: 900px) {
+  .container {
+    width: 85%;
+  }
+}
+@media (max-width: 600px) {
+    :root{
+        --heading-lg: 28px;
+        --heading-md: 22px;
+        --heading-sm: 18px;
+
+        --body-xl: 18px;
+        --body-lg: 14px;
+        --body-md: 13px;
+        --body-sm: 12px;
+        --body-vsm: 10px;
+    }
+}

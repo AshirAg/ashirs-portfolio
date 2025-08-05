@@ -1,7 +1,8 @@
 .navbar_section{
     position: sticky;
     left: 50%;
-    top: var(--spacing-xl)
+    top: var(--spacing-xl);
+    z-index: 1;
 }
 .links{
     display: flex;

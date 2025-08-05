@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    padding: 0 var(--spacing-xl1);
+    padding-left: var(--spacing-xl1);
 }
 .timeline{
     font-size: var(--body-sm);
@@ -10,8 +10,9 @@
 }
 .org_name{
     display: flex;
-    gap: var(--spacing-lg);
-    margin-bottom: var(--spacing-sm);
+    flex-wrap: wrap;
+    gap: var(--spacing-sm) var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
 }
 .role{
     color: var(--text-muted);
@@ -19,7 +20,7 @@
     margin-bottom: var(--spacing-md);
 }
 ul{
-    padding-left: var(--spacing-xl);
+    padding-left: var(--spacing-lg);
 }
 ul li{
     font-size: var(--body-md);

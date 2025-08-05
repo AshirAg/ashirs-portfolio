@@ -1,19 +1,31 @@
 import OrgInfo from "../micro-components/orgInfo/OrgInfo.jsx";
-import saranAuraImage from '../../assets/images/org/saran-aura.png';
+import hdcImage from '../../assets/images/org/hdc.png';
+import merrylandImage from '../../assets/images/org/merryland.png';
 
 function Education(){
     const eduData = [
         {
-            timeline: "April 2021 - July 2025",
-            orgName: "Himalaya Darshan College (T.U. Affiliated)",
-            workType: "",
+            timeline: "Apr 2021 - July 2025",
+            orgName: "Himalaya Darshan College",
+            workType: "T.U. Affiliated",
             role: "Bachelors of Information Management (BIM)",
-            image: saranAuraImage,
+            image: hdcImage,
             works: [
                 "Learnt Web Development - Frontend: HTML, CSS, JS and Backend: PHP and Java.",
                 "C and Java programming language.",
                 "Gained Management Skills",
                 "Knowledge of Computer Networking, Cyber Ethics, and more.",
+            ],
+        },
+        {
+            timeline: "July 2018 - Nov 2020",
+            orgName: "Merryland College",
+            workType: "+2",
+            role: "Management",
+            image: merrylandImage,
+            works: [
+                "Economics and mathematics.",
+                "Management.",
             ],
         },
     ];
