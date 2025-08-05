@@ -1,20 +1,19 @@
-.button_primary{
+button{
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--border-rad-sm);
+    font-size: var(--body-lg);
+    flex: 1;
+}
+.button_primary{
     border: var(--border-width) solid var(--border-primary);
     background-color: var(--bg-primary);
     background-color: transparent;
     color: var(--text-primary);
     cursor: pointer;
-    flex-grow: 3;
-    
-    
-    /* measuring / testing / passed */
-    padding: var(--spacing-md) var(--spacing-lg);
-    border-radius: var(--border-rad-sm);
-    font-size: var(--body-lg);
-    gap: 0.5rem;
 }
 .button_primary:hover{
     background-color: var(--bg-hover);
@@ -22,19 +21,10 @@
 
 /* ============= secondary button ============= */
 .button_secondary{
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border: var(--border-width) solid var(--accent-primary);
     background-color: var(--accent-primary);
     color: var(--bg-primary);
-    cursor: pointer;
-    flex-grow: 1;
-    
-    /* measuring / testing / passed */
-    padding: 0.5rem 1rem;
-    border-radius: 0.4rem;
-    font-size: 14px;
+
 }
 .button_secondary:hover{
     background-color: var(--accent-hover);
@@ -50,4 +40,9 @@
 
 .md{
     max-width: fit-content;
+}
+
+span.icon{
+    height: max-content;
+    display: flex;
 }

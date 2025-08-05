@@ -59,6 +59,7 @@
 }
 *{
     transition: all 150ms ease-in-out;
+    -webkit-tap-highlight-color: transparent;
 }
 body{
     display: flex;
@@ -67,9 +68,6 @@ body{
     font-size: var(--body-lg);
     background-color: var(--bg-primary);
     color: var(--text-primary);
-}
-a, button {
-  -webkit-tap-highlight-color: transparent;
 }
 
 #root{
