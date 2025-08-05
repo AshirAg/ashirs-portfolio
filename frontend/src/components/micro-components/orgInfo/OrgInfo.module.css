@@ -28,6 +28,7 @@ ul li{
 }
 
 .org_img{
+    background-color: var(--bg-primary);
     position: absolute;
     height: 50px;
     aspect-ratio: 1/1;
