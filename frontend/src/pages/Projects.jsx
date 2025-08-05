@@ -1,8 +1,14 @@
-
+import ProjectsContainer from "../components/projectsContainer/ProjectsContainer.jsx";
+import styles from "./css/Projects.module.css";
 
 function Projects(){
     return(
-        <h3>Projects</h3>
+        <div className="section">
+            <div className={`container ${styles.container}`}>
+                <h1>Projects</h1>
+                <ProjectsContainer />
+            </div>
+        </div>
     )
 }
 
