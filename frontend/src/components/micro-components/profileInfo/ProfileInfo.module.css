@@ -16,12 +16,3 @@ p.desc{
     gap: var(--spacing-lg);
     align-items: center;
 }
-.links a{
-    display: flex;
-    font-size: var(--body-lg);
-    color: var(--text-muted);
-}
-.links a:hover{
-    font-size: var(--body-lg);
-    color: var(--text-primary);
-}

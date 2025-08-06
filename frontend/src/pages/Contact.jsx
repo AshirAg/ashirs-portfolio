@@ -1,8 +1,10 @@
-
+import ContactHeading from "../components/contactHeading/ContactHeading.jsx";
 
 function Contact(){
     return(
-        <h3>Contact</h3>
+        <>
+        <ContactHeading />
+        </>
     )
 }
 
