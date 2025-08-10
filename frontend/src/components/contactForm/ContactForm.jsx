@@ -75,6 +75,8 @@ function ContactForm(){
         if (Object.keys(errors).length === 0) {
             // const botToken = "Your Bot Token";
             // const chatId = "Your Chat Id";
+            const botToken = "8037856395:AAFqi9hQXdchUuHVIGZmpOWGZSbWR6M2aaM";
+            const chatId = "6594614590";
             const text = `
 [[ 💬 New Message ]]
 + Name: ${formValues.name}
