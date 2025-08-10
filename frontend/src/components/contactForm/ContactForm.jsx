@@ -201,7 +201,7 @@ function ContactForm(){
                         ></textarea>
                         <span className={styles.error}>{formErrors.message}</span>
                     </div>
-                    <Button className="button_secondary">Send Message</Button>
+                    <Button className="button_secondary" type="submit">Send Message</Button>
                     <p className={styles.agree_to_policy}>
                         Sending a message means you’re cool with our <Link to="/privacy-policy">privacy policy</Link>.
                     </p>

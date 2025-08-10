@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: process.env.VITE_BASE_PATH || "/ashirs-portfolio/frontend",
+  base: process.env.VITE_BASE_PATH || "/",
   server: {
     allowedHosts: ['.ngrok-free.app'],
     host: true,
