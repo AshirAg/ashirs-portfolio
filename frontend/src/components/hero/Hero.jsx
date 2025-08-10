@@ -13,8 +13,8 @@ function Hero(){
                     <ProfileInfo />
                 </div>
                 <div className={styles.button_container}>
-                    <Button>Hire Me</Button>
-                    <Button>My Projects</Button>
+                    <Button to='/contact'>Hire Me</Button>
+                    <Button to='/projects'>My Projects</Button>
                 </div>
             </div>
         </div>

@@ -2,6 +2,7 @@ import styles from "./ContactForm.module.css";
 import Button from "../micro-components/button/Button.jsx";
 import { useState, useEffect } from "react";
 import { AiOutlineCheckCircle, AiOutlineCloseCircle } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 function Toast({ message, type, onClose }) {
   const [isFadingOut, setIsFadingOut] = useState(false);
@@ -72,8 +73,8 @@ function ContactForm(){
         setIsSubmit(true);
 
         if (Object.keys(errors).length === 0) {
-            const botToken = "Your Bot Token";
-            const chatId = "Your Chat Id";
+            // const botToken = "Your Bot Token";
+            // const chatId = "Your Chat Id";
             const text = `
 [[ 💬 New Message ]]
 + Name: ${formValues.name}
@@ -200,7 +201,7 @@ function ContactForm(){
                     </div>
                     <Button className="button_secondary">Send Message</Button>
                     <p className={styles.agree_to_policy}>
-                        Sending a message means you’re cool with our Privacy Policy.
+                        Sending a message means you’re cool with our <Link to="/privacy-policy">privacy policy</Link>.
                     </p>
                 </form>
             </div>

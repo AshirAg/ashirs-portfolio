@@ -14,9 +14,10 @@ function ProjectsContainer({limit}){
                 "MySQL", "PHP", "JavaScript", "Figma", "CSS", "Bootstrap", 'HTML',
             ],
             buttons: [
-                "Visit Site",
+                {
+                    label: "Coming soon ...",
+                }
             ]
-
         },
         {
             image: hyropowerProjectImage,
@@ -26,7 +27,12 @@ function ProjectsContainer({limit}){
                 "MySQL", "PHP", "JavaScript", "Figma", "CSS", "Bootstrap", 'HTML',
             ],
             buttons: [
-                "Visit Site",
+                {
+                    label: "Visit Site",
+                    href: "https://www.panchkhapanhydropower.com/",
+                    target: "_blank",
+
+                }
             ]
 
         },
@@ -38,9 +44,10 @@ function ProjectsContainer({limit}){
                 "MySQL", "PHP", "JavaScript", "Figma", "CSS", "Bootstrap", 'HTML',
             ],
             buttons: [
-                "Visit Site",
+                {
+                    label: "Coming soon ...",
+                }
             ]
-
         },
     ]
 

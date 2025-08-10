@@ -4,6 +4,7 @@ import AppLayout from './layout/AppLayout';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Projects from './pages/Projects';
+import Privacy from './pages/Privacy.jsx';
 import Test from './pages/Test.jsx';
 import Space from './components/space/Space.jsx';
 
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: '/projects',
         element: <Projects/>,
+      },
+      {
+        path: '/privacy-policy',
+        element: <Privacy/>,
       },
       
     ]

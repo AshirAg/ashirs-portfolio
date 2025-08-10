@@ -4,7 +4,7 @@ import Button from "../button/Button.jsx";
 import { LuLink } from "react-icons/lu";
 import { LuGithub } from "react-icons/lu";
 
-function ProjectCard({image, project_name, project_description, stacks, buttons}){
+function ProjectCard({image, project_name, project_description, stacks, buttons = []}){
     return(
         <div className={styles.project_card}>
             <div className={styles.img_section}>
@@ -26,10 +26,18 @@ function ProjectCard({image, project_name, project_description, stacks, buttons}
                     {buttons.map((item, idx) =>(
                         <Button 
                             className="button_secondary sm" 
-                            icon={item === "Open Source" ? <LuGithub /> : <LuLink />} 
+                            icon={
+                                item === "Open Source" ? (
+                                    <LuGithub />
+                                ) : item.label === "Visit Site" ? (
+                                    <LuLink />
+                                ) : null
+                            } 
                             key={idx}
+                            href={item.href}
+                            target={item.target}
                         >
-                            {item}
+                            {item.label}
                         </Button>
                     ))}
                 </div>
