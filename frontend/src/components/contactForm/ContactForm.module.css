@@ -12,11 +12,11 @@ form{
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-md);
+    gap: var(--spacing-lg);
 }
 .dual_inputs{
     display: flex;
-    gap: var(--spacing-md);
+    gap: var(--spacing-lg);
     width: 100%;
 }
 .inputContainer{
@@ -26,13 +26,121 @@ form{
     gap: var(--spacing-sm);
 }
 .inputContainer .inputField{
-    flex-grow: 1;
-    border-radius: var(--border-rad-md);
+    flex-grow: 1 1 0;
+    border-radius: var(--border-rad-sm);
     font-size: var(--body-lg);
     padding: var(--spacing-md) var(--spacing-lg);
+    background-color: transparent;
+    border: var(--border-width) solid var(--border-primary);
+    color: var(--text-primary);
+    outline: none;
+}
+.inputContainer .inputField:focus{
+    border: var(--border-width) solid var(--accent-primary);
+}
+.inputContainer textarea.inputField{
+    resize: none;
+    min-height: 7rem;
+}
+
+span.error{
+    color: var(--error-primary);
+    font-size: var(--body-md);
+}
+.agree_to_policy{
+    font-size: var(--body-sm);
+    color: var(--text-muted);
 }
 
 
 
 
+/* for toast */
+.toast{
+    position: fixed;
+    top: var(--spacing-xl1);
+    right: var(--spacing-lg);
+    border: var(--border-width) solid var(--border-primary);
+    background-color: var(--bg-primary);
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--border-rad-sm);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-md);
+    font-size: var(--body-md);
+    z-index: 3;
+    width: max-content;
+    max-width: var(--container-width);
+    animation: fadeInUpDesktop 0.3s ease forwards;
+}
+.toast.fade_out {
+    animation: fadeOutUpDesktop 0.3s ease forwards;
+}
+.toast p{
+    text-wrap: balance;
+}
 
+@keyframes fadeInUpDesktop {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutUpDesktop {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes fadeInUpMobile {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@keyframes fadeOutUpMobile {
+  0% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+}
+
+
+
+@media (max-width: 600px) {
+    .dual_inputs{
+        flex-direction: column;
+    }
+    .toast{
+        left: 50%;
+        max-width: 90%;
+        animation: fadeInUpMobile 0.3s ease forwards;
+
+    }
+    .toast.toast.fade_out{
+        left: 50%;
+        max-width: 90%;
+        animation: fadeOutUpMobile 0.3s ease forwards;
+
+    }
+}

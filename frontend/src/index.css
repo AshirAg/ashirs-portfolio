@@ -19,6 +19,8 @@
     --accent-primary: #FFFFFF;
     --accent-hover: #CCCCCC;
 
+    --error-primary: hsl(0, 100%, 65%);
+
     /* ==================== fonts ==================== */
     --heading-font: "Space Grotesk";
     --body-font: "DM Sans";
@@ -64,7 +66,6 @@
 }
 body{
     display: flex;
-
     font-family: var(--body-font);
     font-size: var(--body-lg);
     background-color: var(--bg-primary);
@@ -106,6 +107,17 @@ h3{
 a{
     text-decoration: none;
     color: var(--text-primary);
+}
+textarea{
+    font-family: var(--body-font);
+}
+
+input:-webkit-autofill, textarea:-webkit-autofill {
+    -webkit-text-fill-color: var(--text-primary);
+    caret-color: var(--text-primary);
+    background-color: var(--bg-hover);
+    background-clip: content-box;
+    -webkit-box-shadow: 0 0 0 1000px var(--bg-hover) inset;
 }
 
 @media (max-width: 900px) {
