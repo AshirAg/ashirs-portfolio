@@ -1,0 +1,38 @@
+.form_section{
+    background: var(--bg-primary);
+    border-top: var(--border-width) solid var(--border-primary);
+    border-bottom: var(--border-width) solid var(--border-primary);
+}
+.form_container{
+    padding: var(--spacing-xl) 0;
+    gap: var(--spacing-lg);
+    align-items: start;
+}
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+.dual_inputs{
+    display: flex;
+    gap: var(--spacing-md);
+    width: 100%;
+}
+.inputContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+.inputContainer .inputField{
+    flex-grow: 1;
+    border-radius: var(--border-rad-md);
+    font-size: var(--body-lg);
+    padding: var(--spacing-md) var(--spacing-lg);
+}
+
+
+
+
+
