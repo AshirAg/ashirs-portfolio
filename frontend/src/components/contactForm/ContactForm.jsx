@@ -73,67 +73,28 @@ function ContactForm(){
         setIsSubmit(true);
 
         if (Object.keys(errors).length === 0) {
-            const botToken = import.meta.env.VITE_TG_BOT_TOKEN;;
-            const chatId = import.meta.env.VITE_TG_CHAT_ID;;
-            const text = `
-[[ 💬 New Message ]]
-+ Name: ${formValues.name}
-+ Email: ${formValues.email}
-+ Message: ${formValues.message}
-            `;
-
             try {
-                const res = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({
-                        chat_id: chatId,
-                        text: text,
-                        parse_mode: "Markdown"
-                    })
-                });
+            const res = await fetch("../../../api/send-message", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formValues)
+            });
 
-                // Handle HTTP status errors (e.g., 404, 403)
-                if (!res.ok) {
-                    throw new Error(`HTTP ${res.status}: ${res.statusText}`);
-                }
+            const data = await res.json();
 
-                const data = await res.json();
+            if (!data.ok) {
+                throw new Error(data.error || "Unknown error");
+            }
 
-                // Handle Telegram API errors
-                if (!data.ok) {
-                    throw new Error(`Telegram error: ${data.description}`);
-                }
-
-                // If everything is OK
-                setFormValues(initialValues);
-                setToast({
-                    message: "Your message was sent successfully!",
-                    type: "success"
-                });
+            setFormValues(initialValues);
+            setToast({ message: "Your message was sent successfully!", type: "success" });
 
             } catch (err) {
-                console.error("Error sending message:", err);
-
-                let userMessage = "Your message could not be sent. ";
-
-                if (err.message.includes("Failed to fetch")) {
-                    userMessage += "It looks like Telegram's server is unreachable. Check your internet or try VPN.";
-                } else if (err.message.includes("HTTP")) {
-                    userMessage += `The server responded with an error: ${err.message}`;
-                } else if (err.message.includes("Telegram error")) {
-                    userMessage += err.message.replace("Telegram error: ", "Reason: ");
-                } else {
-                    userMessage += "Something went wrong. Please try again later.";
-                }
-
-                setToast({
-                    message: userMessage,
-                    type: "failed"
-                });
+            setToast({ message: `Your message was not sent: ${err.message}`, type: "failed" });
             }
         }
     };
+
 
 
     useEffect(() => {
