@@ -73,8 +73,8 @@ function ContactForm(){
         setIsSubmit(true);
 
         if (Object.keys(errors).length === 0) {
-            const botToken = "8037856395:AAFqi9hQXdchUuHVIGZmpOWGZSbWR6M2aaM";
-            const chatId = "6594614590";
+            const botToken = import.meta.env.VITE_TG_BOT_TOKEN;;
+            const chatId = import.meta.env.VITE_TG_CHAT_ID;;
             const text = `
 [[ 💬 New Message ]]
 + Name: ${formValues.name}
@@ -108,14 +108,14 @@ function ContactForm(){
                 // If everything is OK
                 setFormValues(initialValues);
                 setToast({
-                    message: "✅ Your message was sent successfully!",
+                    message: "Your message was sent successfully!",
                     type: "success"
                 });
 
             } catch (err) {
                 console.error("Error sending message:", err);
 
-                let userMessage = "❌ Your message could not be sent. ";
+                let userMessage = "Your message could not be sent. ";
 
                 if (err.message.includes("Failed to fetch")) {
                     userMessage += "It looks like Telegram's server is unreachable. Check your internet or try VPN.";
