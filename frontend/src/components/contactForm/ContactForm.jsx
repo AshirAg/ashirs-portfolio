@@ -15,7 +15,7 @@ function Toast({ message, type, onClose }) {
     // Start timer to fade out after 3 seconds
     const timer = setTimeout(() => {
       setIsFadingOut(true);
-    }, 3000);
+    }, 5000);
 
     return () => clearTimeout(timer);
   }, [message]);
@@ -66,15 +66,13 @@ function ContactForm(){
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const errors = validate(formValues);
         setFormErrors(errors);
         setIsSubmit(true);
 
         if (Object.keys(errors).length === 0) {
-            // const botToken = "Your Bot Token";
-            // const chatId = "Your Chat Id";
             const botToken = "8037856395:AAFqi9hQXdchUuHVIGZmpOWGZSbWR6M2aaM";
             const chatId = "6594614590";
             const text = `
@@ -84,26 +82,59 @@ function ContactForm(){
 + Message: ${formValues.message}
             `;
 
-            fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                chat_id: chatId,
-                text: text,
-                parse_mode: "Markdown"
-            })
-            })
-            .then(res => res.json())
-            .then(data => {
+            try {
+                const res = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        chat_id: chatId,
+                        text: text,
+                        parse_mode: "Markdown"
+                    })
+                });
+
+                // Handle HTTP status errors (e.g., 404, 403)
+                if (!res.ok) {
+                    throw new Error(`HTTP ${res.status}: ${res.statusText}`);
+                }
+
+                const data = await res.json();
+
+                // Handle Telegram API errors
+                if (!data.ok) {
+                    throw new Error(`Telegram error: ${data.description}`);
+                }
+
+                // If everything is OK
                 setFormValues(initialValues);
-                setToast({message: "Your message is sent to me successfully.", type: "success"})
-            })
-            .catch(err => {
-                console.error("Error sending message", err);
-                setToast({message: "Your message was not sent!", type: "failed"})
-            });
+                setToast({
+                    message: "✅ Your message was sent successfully!",
+                    type: "success"
+                });
+
+            } catch (err) {
+                console.error("Error sending message:", err);
+
+                let userMessage = "❌ Your message could not be sent. ";
+
+                if (err.message.includes("Failed to fetch")) {
+                    userMessage += "It looks like Telegram's server is unreachable. Check your internet or try VPN.";
+                } else if (err.message.includes("HTTP")) {
+                    userMessage += `The server responded with an error: ${err.message}`;
+                } else if (err.message.includes("Telegram error")) {
+                    userMessage += err.message.replace("Telegram error: ", "Reason: ");
+                } else {
+                    userMessage += "Something went wrong. Please try again later.";
+                }
+
+                setToast({
+                    message: userMessage,
+                    type: "failed"
+                });
+            }
         }
     };
+
 
     useEffect(() => {
         if (Object.keys(formErrors).length === 0 && isSubmit) {
