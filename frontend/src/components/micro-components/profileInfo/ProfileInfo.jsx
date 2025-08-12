@@ -15,7 +15,7 @@ function ProfileInfo(){
             <p className={styles.desc}>Full-stack Web Developer focused on building clean & functional websites. Building websites for over 4 years.</p>
             <div className={styles.links}>
                 <Links />
-                <Button className='sm button_primary' icon={<BsFileEarmarkArrowDown />}>Resume</Button>
+                {/* <Button className='sm button_primary' icon={<BsFileEarmarkArrowDown />}>Resume</Button> */}
             </div>
         </div>
         </>
