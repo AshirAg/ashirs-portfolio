@@ -2,7 +2,6 @@ import styles from './ProfileInfo.module.css'
 import { IoLocationOutline } from "react-icons/io5";
 import Button from '../button/Button.jsx';
 import Links from '../links/Links.jsx';
-import Resume from '../../../assets/files/Resume.pdf';
 
 import { BsFileEarmarkArrowDown } from "react-icons/bs";
 
@@ -16,7 +15,7 @@ function ProfileInfo(){
             <p className={styles.desc}>Full-stack Web Developer focused on building clean & functional websites. Building websites for over 4 years.</p>
             <div className={styles.links}>
                 <Links />
-                <Button className='sm button_primary' href={Resume} target='_blank' download="Ashir_Agrawal_Resume.pdf" icon={<BsFileEarmarkArrowDown />}>Resume</Button>
+                <Button className='sm button_primary' href="/Resume.pdf" target='_blank' download="Ashir_Agrawal_Resume.pdf" icon={<BsFileEarmarkArrowDown />}>Resume</Button>
             </div>
         </div>
         </>
