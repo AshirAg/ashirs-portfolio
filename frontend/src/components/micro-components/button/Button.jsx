@@ -5,9 +5,10 @@ function Button({
   children = "Button",
   className = "button_primary",
   icon = null,
-  to = "",       // internal route path (React Router)
-  href = "",     // external url
-  target = "",   // target for external link
+  to = "",
+  href = "",
+  target = "",
+  download = false,
   onClick,
   ...restProps
 }) {
@@ -20,24 +21,39 @@ function Button({
 
   const handleClick = (e) => {
     if (to) {
-      // Internal navigation via react-router
       e.preventDefault();
       navigate(to);
     } else if (href) {
-      // External link navigation
-      if (target === "_blank") {
+      if (download) {
+        e.preventDefault();
+
+        const link = document.createElement('a');
+        link.href = href;
+        link.download = typeof download === "string" ? download : ""; 
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+
+        // 🔹 also open in new tab
+        window.open(href, '_blank', 'noopener,noreferrer');
+
+      } else if (target === "_blank") {
         window.open(href, '_blank', 'noopener,noreferrer');
       } else {
         window.location.href = href;
       }
     } else {
-      // Normal button click
       if (onClick) onClick(e);
     }
   };
 
   return (
-    <button className={classList} onClick={handleClick} {...restProps} type={restProps.type || 'button'}>
+    <button 
+      className={classList} 
+      onClick={handleClick} 
+      {...restProps} 
+      type={restProps.type || 'button'}
+    >
       {children}
       {icon && <span className={styles.icon}>{icon}</span>}
     </button>
