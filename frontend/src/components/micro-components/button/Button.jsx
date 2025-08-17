@@ -38,6 +38,7 @@ function Button({
           link.click();
           link.remove();
           window.URL.revokeObjectURL(url);
+          window.open(href, '_blank', 'noopener,noreferrer');
         });
 
       } else if (target === "_blank") {
