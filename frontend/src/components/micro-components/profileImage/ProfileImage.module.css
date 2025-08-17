@@ -18,7 +18,7 @@
 .outer_ring .image_container:hover img.emoji{
     top: 38%;
     left: 55%;
-    transform: translate(-50%, -50%) rotate(10deg) scale(0.13);
+    transform: translate(-50%, -50%) rotate(10deg) scale(1);
 }
 .outer_ring .image_container img.profile_image{
     width: 100%;

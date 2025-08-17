@@ -16,7 +16,7 @@ function OrgInfo({timeline, orgName, workType, role, image, works}){
                 ))}
             </ul>
             <div className={styles.org_img}>
-                <img src={image} alt={orgName} />
+                <img src={image} alt={orgName} height={50}/>
             </div>
         </div>
     )

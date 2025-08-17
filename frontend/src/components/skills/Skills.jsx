@@ -104,7 +104,7 @@ function Skills() {
                     {skills.map((skill, index) => (
                         <div key={index} className={styles.skill_card}>
                             <div className={styles.image_container}>
-                                <img src={skill.image} alt={skill.title} className={styles.icon} />
+                                <img src={skill.image} alt={skill.title} className={styles.icon} width={100}/>
                             </div>
                             <h3>{skill.title}</h3>
                             <p>{skill.desc}</p>

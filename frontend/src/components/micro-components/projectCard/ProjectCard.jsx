@@ -9,7 +9,7 @@ function ProjectCard({image, project_name, project_description, stacks, buttons 
         <div className={styles.project_card}>
             <div className={styles.img_section}>
                 <div className={styles.img_container}>
-                    <img src={image} alt="" />
+                    <img src={image} alt={project_name} width={400}/>
                 </div>
             </div>
             <div className={styles.details}>
