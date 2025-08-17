@@ -27,15 +27,18 @@ function Button({
       if (download) {
         e.preventDefault();
 
-        const link = document.createElement('a');
-        link.href = href;
-        link.download = typeof download === "string" ? download : ""; 
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-
-        // 🔹 also open in new tab
-        window.open(href, '_blank', 'noopener,noreferrer');
+        fetch(href)
+        .then(res => res.blob())
+        .then(blob => {
+          const url = window.URL.createObjectURL(blob);
+          const link = document.createElement('a');
+          link.href = url;
+          link.download = typeof download === "string" ? download : "";
+          document.body.appendChild(link);
+          link.click();
+          link.remove();
+          window.URL.revokeObjectURL(url);
+        });
 
       } else if (target === "_blank") {
         window.open(href, '_blank', 'noopener,noreferrer');
