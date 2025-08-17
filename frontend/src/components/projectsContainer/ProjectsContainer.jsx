@@ -7,6 +7,7 @@ import multiVendorEcommProjectImage from "../../assets/images/projects/multi-ven
 function ProjectsContainer({limit}){
     const projectData = [
         {
+            tag_name: "solo",
             image: jewelryEcommProjectImage,
             project_name: "Jewelry eCommerce",
             project_description: "Fully functional jewelry eCommerce website with CMS, integrated payments and an admin dashboard.",
@@ -20,6 +21,7 @@ function ProjectsContainer({limit}){
             ]
         },
         {
+            tag_name: "collaborative",
             image: hyropowerProjectImage,
             project_name: "Hydropower Website",
             project_description: "Dynamic web application with CMS and SEO Optimization.",
@@ -37,6 +39,7 @@ function ProjectsContainer({limit}){
 
         },
         {
+            tag_name: "collaborative",
             image: multiVendorEcommProjectImage,
             project_name: "Multi Vendor eCommerce",
             project_description: "Ecommerce with multiple buyers and sellers, dynamic multi role admin panel.",
@@ -60,6 +63,7 @@ function ProjectsContainer({limit}){
                     key={index}
                     image={item.image}
                     project_name={item.project_name}
+                    tag_name={item.tag_name}
                     project_description={item.project_description}
                     stacks={item.stacks}
                     buttons={item.buttons}

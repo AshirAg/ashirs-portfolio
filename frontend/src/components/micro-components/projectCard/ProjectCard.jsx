@@ -4,11 +4,14 @@ import Button from "../button/Button.jsx";
 import { LuLink } from "react-icons/lu";
 import { LuGithub } from "react-icons/lu";
 
-function ProjectCard({image, project_name, project_description, stacks, buttons = []}){
+function ProjectCard({tag_name, image, project_name, project_description, stacks, buttons = []}){
     return(
         <div className={styles.project_card}>
             <div className={styles.img_section}>
                 <div className={styles.img_container}>
+                    <div className={styles.tag}>
+                        <p className={styles.tag_name}>{tag_name}</p>
+                    </div>
                     <img src={image} alt={project_name} width={400}/>
                 </div>
             </div>

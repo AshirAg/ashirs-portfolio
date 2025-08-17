@@ -5,7 +5,7 @@ import passionChasersImage from '../../assets/images/org/passion-chasers.png';
 function Work(){
     const workData = [
         {
-            timeline: "June 30 - Present",
+            timeline: "June 2025 - Present",
             orgName: "Saran Aura",
             workType: "Contract",
             role: "Project Manager / Full-Stack Web Developer",
@@ -13,8 +13,8 @@ function Work(){
             works: [
                 "Planned & Designed system architecture, user flow and database structure.",
                 "Designed UI/UX tailored to client’s need.",
-                "Developed Full-Stack web application (Frontend + Backend).",
-                "Performed testing and successfully launched the site.",
+                "Developing Full-Stack web application (Frontend + Backend).",
+                // "Performed testing and successfully launched the site.",
             ],
         },
         {
@@ -28,6 +28,7 @@ function Work(){
                 "Redesigned frontend of Hydropower website.",
                 "Redesigned and developed the company’s website with admin dashboard.",
                 "Managed & Hosted various websites.",
+                "Worked collaboratively.",
             ],
         },
     ];
