@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://ashiragrawal.com.np/</loc>
+    <lastmod>2025-08-17</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Projects page -->
+  <url>
+    <loc>https://ashiragrawal.com.np/projects</loc>
+    <lastmod>2025-08-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contact page -->
+  <url>
+    <loc>https://ashiragrawal.com.np/contact</loc>
+    <lastmod>2025-08-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Privacy Policy page -->
+  <url>
+    <loc>https://ashiragrawal.com.np/privacy-policy</loc>
+    <lastmod>2025-08-17</lastmod>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>

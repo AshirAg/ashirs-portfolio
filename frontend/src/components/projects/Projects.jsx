@@ -8,8 +8,8 @@ function Projects(){
             <div className={`container ${styles.projects_container}`}>
                 <div className={styles.heading}>
                     <h2>Projects</h2>
-                    <Link to="/projects">
-                        see more
+                    <Link to="/projects" aria-label="View all projects by Ashir Agrawal">
+                        View all projects
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path d="M5 12h14M13 5l7 7-7 7"/>
                         </svg>

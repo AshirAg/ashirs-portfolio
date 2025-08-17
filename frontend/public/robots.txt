@@ -1,0 +1,14 @@
+# Allow all search engines to crawl the site
+User-agent: *
+Disallow:
+
+# Sitemap location (replace with your actual sitemap URL)
+Sitemap: https://yourdomain.com/sitemap.xml
+
+# Optional: block unnecessary or private pages
+Disallow: /node_modules/
+Disallow: /build/
+Disallow: /src/
+
+# Optional: prevent search engines from indexing test pages
+Disallow: /test
