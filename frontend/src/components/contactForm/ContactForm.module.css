@@ -58,7 +58,7 @@ span.error{
 /* for toast */
 .toast{
     position: fixed;
-    top: var(--spacing-xl1);
+    top: calc(var(--spacing-xl2) + var(--spacing-lg));
     right: var(--spacing-lg);
     border: var(--border-width) solid var(--border-primary);
     background-color: var(--bg-primary);
@@ -76,9 +76,6 @@ span.error{
 }
 .toast.fade_out {
     animation: fadeOutUpDesktop 0.3s ease forwards;
-}
-.toast p{
-    text-wrap: balance;
 }
 
 @keyframes fadeInUpDesktop {
@@ -128,19 +125,22 @@ span.error{
 
 
 @media (max-width: 600px) {
-    .dual_inputs{
-        flex-direction: column;
-    }
-    .toast{
-        left: 50%;
-        max-width: 90%;
-        animation: fadeInUpMobile 0.3s ease forwards;
+  .dual_inputs{
+      flex-direction: column;
+  }
+  .toast{
+      left: 50%;
+      max-width: 90%;
+      animation: fadeInUpMobile 0.3s ease forwards;
 
-    }
-    .toast.toast.fade_out{
-        left: 50%;
-        max-width: 90%;
-        animation: fadeOutUpMobile 0.3s ease forwards;
-
-    }
+  }
+  .toast.toast.fade_out{
+      left: 50%;
+      max-width: 90%;
+      animation: fadeOutUpMobile 0.3s ease forwards;
+  }
+  .toast svg{
+    width: 2rem;
+    height: 2rem;
+  }
 }

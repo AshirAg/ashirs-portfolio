@@ -18,10 +18,8 @@
 .container a{
     color: var(--text-secondary);
     text-decoration: underline;
-    font-weight: bold;
 }
 .container a:hover{
     color: var(--text-primary);
     text-decoration: underline;
-    font-weight: bold;
 }

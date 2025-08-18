@@ -1,6 +1,6 @@
 import OrgInfo from "../micro-components/orgInfo/OrgInfo.jsx";
-import hdcImage from '../../assets/images/org/hdc.png';
-import merrylandImage from '../../assets/images/org/merryland.png';
+import hdcImage from '../../assets/images/org/hdc.webp';
+import merrylandImage from '../../assets/images/org/merryland.webp';
 
 function Education(){
     const eduData = [

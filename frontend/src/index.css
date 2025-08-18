@@ -22,7 +22,9 @@
     --error-primary: hsl(0, 100%, 65%);
 
     /* ==================== fonts ==================== */
-    --heading-font: "Space Grotesk";
+    /* --heading-font: "Space Grotesk"; */
+    /* --heading-font: "Baloo 2"; */
+    --heading-font: "Rubik";
     --body-font: "DM Sans";
 
     --heading-lg: 36px;

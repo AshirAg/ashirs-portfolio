@@ -1,17 +1,20 @@
 import styles from './Skills.module.css';
-import pythonImg from "../../assets/images/skills/python.png"
-import javaImg from "../../assets/images/skills/java.png"
-import cImg from "../../assets/images/skills/c.png"
-import figmaImg from "../../assets/images/skills/figma.png"
-import gitImg from "../../assets/images/skills/git.png"
-import mySqlImg from "../../assets/images/skills/mysql.png"
-import sassImg from "../../assets/images/skills/sass.png"
-import htmlImg from "../../assets/images/skills/html.png"
-import cssImg from "../../assets/images/skills/css.png"
-import jsImg from "../../assets/images/skills/js.png"
-import reactImg from "../../assets/images/skills/react.png"
-import phpImg from "../../assets/images/skills/php.png"
-import bootStrapImg from "../../assets/images/skills/bootstrap.png"
+import pythonImg from "../../assets/images/skills/python.webp"
+import javaImg from "../../assets/images/skills/java.webp"
+import cImg from "../../assets/images/skills/c.webp"
+import figmaImg from "../../assets/images/skills/figma.webp"
+import gitImg from "../../assets/images/skills/git.webp"
+import mySqlImg from "../../assets/images/skills/mysql.webp"
+import postgreSqlImg from "../../assets/images/skills/postgre.webp"
+import sassImg from "../../assets/images/skills/sass.webp"
+import htmlImg from "../../assets/images/skills/html.webp"
+import cssImg from "../../assets/images/skills/css.webp"
+import jsImg from "../../assets/images/skills/js.webp"
+import reactImg from "../../assets/images/skills/react.webp"
+import nextImg from "../../assets/images/skills/next.webp"
+import phpImg from "../../assets/images/skills/php.webp"
+import tailwindImg from "../../assets/images/skills/tailwind.webp"
+import bootStrapImg from "../../assets/images/skills/bootstrap.webp"
 
 function Skills() {
     const skills = [
@@ -44,6 +47,12 @@ function Skills() {
             title: 'Git',
             desc: 'Version Control',
             ratings: 2,
+        },
+        {
+            image: postgreSqlImg,
+            title: 'PostgreSQL',
+            desc: 'Database',
+            ratings: 4,
         },
         {
             image: mySqlImg,
@@ -82,17 +91,29 @@ function Skills() {
             ratings: 5.4,
         },
         {
+            image: nextImg,
+            title: 'Next.js',
+            desc: 'React Framework',
+            ratings: 5.5,
+        },
+        {
             image: phpImg,
             title: 'PHP',
             desc: 'Backend Language',
-            ratings: 5.5,
+            ratings: 5.6,
         },
         {
             image: bootStrapImg,
             title: 'BootStrap',
             desc: 'CSS Framework',
             ratings: 1,
-        }
+        },
+        {
+            image: tailwindImg,
+            title: 'Tailwind',
+            desc: 'CSS Framework',
+            ratings: 1.1,
+        },
     ];
 
     skills.sort((a,b) => b.ratings - a.ratings);

@@ -7,7 +7,7 @@ function Footer(){
         <div className={`${styles.section} section`}>
             <div className="container">
                 <div className={styles.copyright_content}>
-                    <p className={styles.copyright}>&copy; {year} ashiragrawal.com.np - All rights reserved.</p>
+                    <p className={styles.copyright}>&copy; {year} <a className={styles.link} href="https://ashiragrawal.com.np/">ashiragrawal.com.np</a> - All rights reserved.</p>
                     
                     <Link className={styles.link} to="/privacy-policy">Privacy policy</Link>
                 </div>

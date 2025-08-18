@@ -1,6 +1,6 @@
 import OrgInfo from "../micro-components/orgInfo/OrgInfo.jsx";
-import saranAuraImage from '../../assets/images/org/saran-aura.png';
-import passionChasersImage from '../../assets/images/org/passion-chasers.png';
+import saranAuraImage from '../../assets/images/org/saran-aura.webp';
+import passionChasersImage from '../../assets/images/org/passion-chasers.webp';
 
 function Work(){
     const workData = [

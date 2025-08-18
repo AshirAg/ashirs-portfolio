@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import styles from './ProfileImage.module.css'
 import profileImage from '../../../assets/images/profile-image.webp'
-import sunGlass from '../../../assets/images/sun-glass.png'
+import sunGlass from '../../../assets/images/sun-glass.webp'
 
 function ProfileImage(){
   useEffect(() => {

@@ -1,7 +1,7 @@
 import styles from "./ContactForm.module.css";
 import Button from "../micro-components/button/Button.jsx";
 import { useState, useEffect } from "react";
-import { AiOutlineCheckCircle, AiOutlineCloseCircle } from "react-icons/ai";
+import { AiOutlineCheckCircle, AiOutlineWarning } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
 function Toast({ message, type, onClose }) {
@@ -15,7 +15,7 @@ function Toast({ message, type, onClose }) {
     // Start timer to fade out after 3 seconds
     const timer = setTimeout(() => {
       setIsFadingOut(true);
-    }, 5000);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, [message]);
@@ -34,7 +34,7 @@ function Toast({ message, type, onClose }) {
       className={`${styles.toast} ${isFadingOut ? styles.fade_out : ""}`}
       onAnimationEnd={handleAnimationEnd}
     >
-      {type === "success" ? <AiOutlineCheckCircle /> : <AiOutlineCloseCircle />}
+      {type === "success" ? <AiOutlineCheckCircle /> : <AiOutlineWarning/>}
       <p className={styles.message}>{message}</p>
     </div>
   );

@@ -1,8 +1,8 @@
 import ProjectCard from "../micro-components/projectCard/ProjectCard";
 import styles from "./ProjectsContainer.module.css";
-import jewelryEcommProjectImage from "../../assets/images/projects/jewelry-ecomm.jpg";
-import hyropowerProjectImage from "../../assets/images/projects/hydropower.png";
-import multiVendorEcommProjectImage from "../../assets/images/projects/multi-vendor-ecomm.png";
+import jewelryEcommProjectImage from "../../assets/images/projects/jewelry-ecomm.webp";
+import hyropowerProjectImage from "../../assets/images/projects/hydropower.webp";
+import multiVendorEcommProjectImage from "../../assets/images/projects/multi-vendor-ecomm.webp";
 
 function ProjectsContainer({limit}){
     const projectData = [
