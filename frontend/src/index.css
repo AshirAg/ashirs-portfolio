@@ -3,6 +3,37 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* DM Sans */
+@font-face {
+  font-family: 'DM Sans';
+  src: url('./assets/fonts/DMSans/DMSans-Regular.ttf') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'DM Sans';
+  src: url('././assets/fonts/DMSans/DMSans-Medium.ttf') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+/* Rubik */
+@font-face {
+  font-family: 'Rubik';
+  src: url('./assets/fonts/Rubik/Rubik-Medium.ttf') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Rubik';
+  src: url('././assets/fonts/Rubik/Rubik-Bold.ttf') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root{
     /* ==================== colors ==================== */
     --bg-primary: hsl(0, 0%, 8%);
@@ -99,12 +130,15 @@ h1, h2, h3, h4, h5, h6{
 }
 h1{
     font-size: var(--heading-lg);
+    font-weight: 700;
 }
 h2{
     font-size: var(--heading-md);
+    font-weight: 400;
 }
 h3{
     font-size: var(--heading-sm);
+    font-weight: 400;
 }
 a{
     text-decoration: none;

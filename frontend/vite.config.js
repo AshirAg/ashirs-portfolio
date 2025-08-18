@@ -8,5 +8,9 @@ export default defineConfig({
   server: {
     allowedHosts: ['.ngrok-free.app'],
     host: true,
+  },
+  build:{
+    target: 'esnext',
+    minify: 'esbuild',
   }
 })
