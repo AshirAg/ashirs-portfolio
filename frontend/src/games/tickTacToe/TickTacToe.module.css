@@ -1,0 +1,128 @@
+.container{
+ text-align: center;
+}
+.board_section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-primary);
+    padding: var(--spacing-xl) 0;
+    border: none;
+    border-top: var(--border-width) solid var(--border-primary);
+    border-bottom: var(--border-width) solid var(--border-primary);
+}
+.board_container{
+    gap: var(--spacing-lg);
+}
+
+/* boards */
+.board{
+    gap: var(--spacing-sm);
+    width: 400px;
+    aspect-ratio: 1/1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgba(220, 220, 220, 0) 70%, rgba(220, 220, 220, 0) 100%);
+}
+.row{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: var(--spacing-sm);
+}
+.cells{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: #141414;
+}
+.cells.win_cells img{
+    transform: scale(1.75);
+}
+.cells img{
+    width: 30%;
+    height: 30%;
+    object-fit: cover;
+}
+
+/* dashboard */
+
+.title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.title h1{
+    text-align: center;
+
+}
+.title a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.title a.hide{
+    visibility: hidden;
+}
+
+.dashboard{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    border: 2px solid #595959;
+    border-radius: 0.4rem;
+    padding: 0.25rem;
+    margin-top: var(--spacing-xl);
+    background-color: #595959;
+}
+.dashboard .player{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.4rem;
+    border: 2px solid transparent;
+}
+.dashboard .player.turn{
+    background-color: #141414;
+    
+}
+.dashboard .player.won{
+    border-color: #ffffff;
+
+}
+.dashboard .player{
+    display: flex;
+    gap: 0.5rem;
+}
+.dashboard .player img{
+    height: 20px;
+    width: 20px;
+}
+
+@media (max-width: 600px) {
+    .dashboard{
+        width: 100%;
+    }
+    .board{
+        width: 100%;
+        aspect-ratio: 1/1;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .row{
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        gap: var(--spacing-sm);
+    }
+    .cells{
+        height: 100%;
+        width: 100%;
+    }
+}

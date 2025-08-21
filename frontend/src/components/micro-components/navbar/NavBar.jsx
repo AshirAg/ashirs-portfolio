@@ -1,8 +1,6 @@
 import { NavLink } from "react-router-dom";
 import styles from './NavBar.module.css'
-import { Gamepad2, Dice6, Joystick } from "lucide-react";
-import { FaGamepad, FaDice, FaChessKnight } from "react-icons/fa";
-import { MdSportsEsports } from "react-icons/md";
+import { Gamepad2, Joystick } from "lucide-react";
 
 function NavBar(){
     return(
@@ -13,7 +11,7 @@ function NavBar(){
                     <NavLink className={({ isActive }) => isActive ? styles.active : ""} to="/contact">Contact</NavLink>
                     <NavLink className={({ isActive }) => isActive ? styles.active : ""} to="/projects">Projects</NavLink>
                 </div>
-                <NavLink  className={({ isActive }) => `{isActive ? styles.active : ""} ${styles.games}`} to="/games">
+                <NavLink  className={({ isActive }) => `${isActive ? styles.active : ""} ${styles.games}`} to="/games">
                     {/* <Gamepad2 /> */}
                     <Joystick />
                 </NavLink>

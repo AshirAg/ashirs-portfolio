@@ -25,7 +25,7 @@ a.games{
     transform: translateY(-50%);
     right: 0;
 }
-a.games:hover{
+a.games:hover, a.games.active{
     color: var(--error-primary);
 }
 .links{
