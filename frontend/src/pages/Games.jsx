@@ -21,7 +21,12 @@ function Games() {
             tag_name: "Single Player",
             image: comingSoon,
             game_name: "Sudoku",
-            // icon: <Clock />
+            icon: <Hourglass />
+        },
+        {
+            tag_name: "Single Player",
+            image: comingSoon,
+            game_name: "Card Match",
             icon: <Hourglass />
         },
     ]
