@@ -1,8 +1,11 @@
 import styles from "./ContactForm.module.css";
 import Button from "../micro-components/button/Button.jsx";
 import { useState, useEffect } from "react";
-import { AiOutlineCheckCircle, AiOutlineWarning } from "react-icons/ai";
 import { Link } from "react-router-dom";
+
+import { AiOutlineCheckCircle, AiOutlineWarning } from "react-icons/ai";
+import { MdSend } from "react-icons/md";
+
 
 function Toast({ message, type, onClose }) {
   const [isFadingOut, setIsFadingOut] = useState(false);
@@ -193,7 +196,7 @@ function ContactForm(){
                         ></textarea>
                         <span className={styles.error}>{formErrors.message}</span>
                     </div>
-                    <Button className="button_secondary" type="submit">Send Message</Button>
+                    <Button className="button_secondary" type="submit" icon={<MdSend />}>Send Message</Button>
                     <p className={styles.agree_to_policy}>
                         Sending a message means you’re cool with our <Link to="/privacy-policy">privacy policy</Link>.
                     </p>
