@@ -1,8 +1,7 @@
 import styles from "./GameCard.module.css";
 import { Link } from "react-router-dom";
-import { Joystick } from "lucide-react";
 
-function GameCard({tag_name, image, game_name, href}){
+function GameCard({tag_name, image, game_name, href, icon}){
     return(
         <Link to={href} className={styles.game_card}>
             <div className={styles.game_info}>
@@ -15,7 +14,7 @@ function GameCard({tag_name, image, game_name, href}){
                 </div>
             </div>
             <div className="icon_container">
-                <Joystick className={styles.icon} />
+                {icon && <icon.type className={styles.icon} />}
             </div>
         </Link>
     )
