@@ -51,6 +51,13 @@ span.error{
     font-size: var(--body-sm);
     color: var(--text-muted);
 }
+.agree_to_policy a{
+    color: var(--text-muted);
+    text-decoration: underline;
+}
+.agree_to_policy a:hover{
+    color: var(--text-primary);
+}
 
 
 
