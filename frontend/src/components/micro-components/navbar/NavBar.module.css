@@ -1,12 +1,32 @@
 .navbar_section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: sticky;
     top: var(--spacing-xl);
     margin: 0 auto;
     z-index: 5;
-    width: max-content;
+    width: 100%;
 }
 .container{
-    width: max-content;
+    /* width: var(--container-width); */
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+a.games{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+a.games:hover{
+    color: var(--error-primary);
 }
 .links{
     display: flex;

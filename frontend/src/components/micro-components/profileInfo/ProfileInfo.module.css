@@ -15,4 +15,5 @@ p.desc{
     display: flex;
     gap: var(--spacing-lg);
     align-items: center;
+    flex-wrap: wrap;
 }

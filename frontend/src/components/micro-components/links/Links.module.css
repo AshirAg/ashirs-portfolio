@@ -12,3 +12,9 @@
     font-size: var(--body-lg);
     color: var(--text-primary);
 }
+
+@media (max-width: 600px) {
+    .links a{
+        font-size: var(--body-xl);
+    }
+}

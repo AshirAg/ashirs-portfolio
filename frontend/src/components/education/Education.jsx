@@ -20,12 +20,12 @@ function Education(){
         {
             timeline: "July 2018 - Nov 2020",
             orgName: "Merryland College",
-            workType: "+2",
-            role: "Management",
+            workType: "NEB",
+            role: "Commerce +2",
             image: merrylandImage,
             works: [
-                "Economics and mathematics.",
-                "Management.",
+                "Economics, mathematics & accounting.",
+                "Management skills.",
             ],
         },
     ];
