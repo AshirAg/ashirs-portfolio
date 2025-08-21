@@ -8,6 +8,7 @@ import Games from './pages/Games';
 import Privacy from './pages/Privacy.jsx';
 import Test from './pages/Test.jsx';
 import Space from './components/space/Space.jsx';
+import Footer from './components/footer/Footer.jsx';
 
 // games
 import TickTacToe from './games/tickTacToe/TickTacToe.jsx';
@@ -41,12 +42,11 @@ const router = createBrowserRouter([
     ]
   },
   {
-    path: '/games',
-    element: <AppLayout/>,
+    path: '/game/',
     children: [
       {
-        path: 'tick-tac-toe',
-        element: <TickTacToe/>,
+        path: 'tic-tac-toe',
+        element: <><Space/><TickTacToe/><Footer /></>,
       },
     ]
   },

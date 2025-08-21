@@ -9,8 +9,8 @@ function Games() {
         {
             tag_name: "Multi Player",
             image: tickTacToe,
-            game_name: "Tick Tac Toe",
-            href: "/games/tick-tac-toe",
+            game_name: "Tic Tac Toe",
+            href: "/game/tic-tac-toe",
         },
     ]
 

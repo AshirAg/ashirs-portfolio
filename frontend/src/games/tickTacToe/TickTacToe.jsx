@@ -106,7 +106,7 @@ const TickTacToe = () => {
                         <HiChevronLeft />
                         Back
                     </Link>
-                    <h1>Tick Tac Toe</h1>
+                    <h1>Tic Tac Toe</h1>
                     <Link className={styles.hide}>
                         <HiChevronLeft />
                         Back
