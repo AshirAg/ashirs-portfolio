@@ -29,7 +29,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: var(--border-rad-md);
+    border-radius: 10%;
     
     position: relative;
     transform-style: preserve-3d;
@@ -63,25 +63,13 @@
 
 .title{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
     width: 100%;
+    gap: var(--spacing-md);
 }
-.title h1{
-    text-align: center;
-
-}
-.title a{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--text-secondary);
-}
-.title a:hover{
-    color: var(--text-primary);
-}
-.title a.hide{
-    visibility: hidden;
+.title svg{
+    height: var(--body-xl);
+    width: var(--body-xl);
 }
 
 .dashboard{

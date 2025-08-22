@@ -102,17 +102,11 @@ const TickTacToe = () => {
         <div className="section">
             <div className={`${styles.container} container`}>
                 <div className={styles.title} >
-                    <Link to="/games">
+                    <Button to="/games" className='button_primary md'>
                         <HiChevronLeft />
-                        Back
-                    </Link>
+                        {/* Back */}
+                    </Button>
                     <h1>Tic Tac Toe</h1>
-                    <Link className={styles.hide}>
-                        <HiChevronLeft />
-                        Back
-                    </Link>
-
-
                 </div>
                 <div className={styles.dashboard}>
                     <div ref={player1Ref} className={`${styles.player} ${styles.turn}`}>

@@ -3,56 +3,101 @@ import { Link } from 'react-router-dom';
 import { HiChevronLeft } from 'react-icons/hi';
 
 import styles from './MatchingPairs.module.css';
-import circleIcon from '../../assets/games/tick-tac-toe/circle.webp';
-import crossIcon from '../../assets/games/tick-tac-toe/cross.webp';
 import Button from '../../components/micro-components/button/Button';
 
 import {
-  Home,
-  Settings,
-  Bell,
-  Heart,
-  Star,
-  Camera,
-  Music,
-  Gamepad2,
-  Globe,
-  Compass,
-  Cpu,
-  Code,
-  Monitor,
-  Smartphone,
-  Cloud,
-  Moon,
-  Sun,
-  Flame,
-  Zap,
-  Infinity,
-  Key,
+    Home,
+    Settings,
+    Bell,
+    Heart,
+    Star,
+    Camera,
+    Music,
+    Gamepad2,
+    Globe,
+    Compass,
+    Cpu,
+    Code,
+    Monitor,
+    Smartphone,
+    Cloud,
+    Moon,
+    Sun,
+    Flame,
+    Zap,
+    Infinity,
+    Key,
+
+    Anchor, 
+    Apple, 
+    Archive, 
+    Award,
+    Battery,
+    Bluetooth, 
+    Book, 
+    Bookmark, 
+    Briefcase, 
+    Car, 
+    Clock, 
+    Coffee, 
+    File,
+    Trophy,
+    Plane,
+    Ship,
+    Building,
+    Lightbulb,
+    Skull,
+    Diamond,
+    Droplet,
+    Flag,
 } from "lucide-react";
 
 const allValues = [
-  <Home/>,
-  <Settings/>,
-  <Bell/>,
-  <Heart/>,
-  <Star/>,
-  <Camera/>,
-  <Music/>,
-  <Gamepad2/>,
-  <Globe/>,
-  <Compass/>,
-  <Cpu/>,
-  <Code/>,
-  <Monitor/>,
-  <Smartphone/>,
-  <Cloud/>,
-  <Moon/>,
-  <Sun/>,
-  <Flame/>,
-  <Zap/>,
-  <Infinity/>,
-  <Key/>
+    <Home/>,
+    <Settings/>,
+    <Bell/>,
+    <Heart/>,
+    <Star/>,
+    <Camera/>,
+    <Music/>,
+    <Gamepad2/>,
+    <Globe/>,
+    <Compass/>,
+    <Cpu/>,
+    <Code/>,
+    <Monitor/>,
+    <Smartphone/>,
+    <Cloud/>,
+    <Moon/>,
+    <Sun/>,
+    <Flame/>,
+    <Zap/>,
+    <Infinity/>,
+    <Key/>,
+
+    <Anchor />,
+    <Apple />,
+    <Archive />,
+    <Award />,
+    <Battery />,
+    <Bluetooth />,
+    <Book />,
+    <Bookmark />,
+    <Briefcase />,
+    <Car />,
+    <Clock />,
+    <Coffee />,
+    <File />,
+
+    <Trophy />,
+    <Plane />,
+    <Ship />,
+    <Building />,
+    <Lightbulb />,
+    <Skull />,
+    <Diamond />,
+    <Flag />,
+    <Droplet />,
 ];
 
 function generateBoard(totalCells) {
@@ -142,15 +187,10 @@ const MatchingPairs = () => {
         <div className="section">
             <div className={`${styles.container} container`}>
                 <div className={styles.title} >
-                    <Link to="/games">
+                    <Button to="/games" className='button_primary md'>
                         <HiChevronLeft />
-                        Back
-                    </Link>
+                    </Button>
                     <h1>Matching Pairs</h1>
-                    <Link className={styles.hide}>
-                        <HiChevronLeft />
-                        Back
-                    </Link>
 
 
                 </div>
@@ -161,6 +201,7 @@ const MatchingPairs = () => {
                         <option value="" disabled>Select the grid</option>
                         <option value="4">2 x 2</option>
                         <option value="16" selected>4 x 4</option>
+                        <option value="36">6 x 6</option>
                     </select>
                 </div>
             </div>
