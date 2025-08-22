@@ -193,7 +193,6 @@ const MatchingPairs = () => {
                         <HiChevronLeft />
                     </Button>
                     <h1>Matching Pairs</h1>
-                    <h1>{allValues}</h1>
 
 
                 </div>
