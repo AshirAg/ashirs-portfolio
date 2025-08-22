@@ -199,9 +199,9 @@ const MatchingPairs = () => {
                         onChange={(e) => setTotalCells(Number(e.target.value))}
                     >
                         <option value="" disabled>Select the grid</option>
-                        <option value="4">2 x 2</option>
-                        <option value="16" selected>4 x 4</option>
-                        <option value="36">6 x 6</option>
+                        <option value="4">Cry Baby</option>
+                        <option value="16" selected>Normal</option>
+                        <option value="36">God Level</option>
                     </select>
                 </div>
             </div>
