@@ -193,6 +193,7 @@ const MatchingPairs = () => {
                         <HiChevronLeft />
                     </Button>
                     <h1>Matching Pairs</h1>
+                    <h1>{allValues}</h1>
 
 
                 </div>
@@ -230,11 +231,23 @@ const MatchingPairs = () => {
                 <div>
                     <Button
                         onClick={() => {
+                            // Lock the board so user can't click
+                            setLockBoard(true);
+
+                            // Step 1: Flip all cards face down visually
+                            setCells(prev =>
+                            prev.map(cell => ({ ...cell, flipped: false, matched: false }))
+                            );
+
+                            // Step 2: Wait a small delay for animation to finish
+                            setTimeout(() => {
+                            // Reshuffle icons and reset states
+                            const newBoard = generateBoard(totalCells);
+                            setCells(newBoard);
                             setClickCount(0);
-                            setClickCount(0);
-                            setCells(generateBoard(totalCells)); // regenerate the board
                             setFlipped([]);
                             setLockBoard(false);
+                            }, 300); // 300ms or match your CSS flip animation
                         }}
                     >
                         Reset
