@@ -203,7 +203,8 @@ const MatchingPairs = () => {
                         <option value="" disabled>Select the grid</option>
                         <option value="4">Cry Baby</option>
                         <option value="16" selected>Normal</option>
-                        <option value="36">God Level</option>
+                        <option value="36">Super Human</option>
+                        <option value="64">God Level</option>
                     </select>
                 </div>
             </div>
