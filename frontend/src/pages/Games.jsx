@@ -1,6 +1,7 @@
 import styles from './css/Games.module.css';
 import GameCard from "../components/micro-components/gameCard/GameCard";
 import tickTacToe from "../assets/games/thumbnail/tick-tac-toe.webp";
+import matchingPairs from "../assets/games/thumbnail/matching-pairs.webp";
 import comingSoon from "../assets/games/thumbnail/coming-soon.svg";
 import { Clock, Hourglass, HourglassIcon } from 'lucide-react';
 import { Joystick } from "lucide-react";
@@ -19,15 +20,15 @@ function Games() {
         },
         {
             tag_name: "Single Player",
-            image: comingSoon,
-            game_name: "Sudoku",
-            icon: <Hourglass />
+            image: matchingPairs,
+            game_name: "Matching Pairs",
+            href: "/game/matching-pairs",
+            icon: <Joystick />
         },
         {
             tag_name: "Single Player",
             image: comingSoon,
-            game_name: "Card Match",
-            href: "/game/matching-pairs",
+            game_name: "Sudoku",
             icon: <Hourglass />
         },
     ]

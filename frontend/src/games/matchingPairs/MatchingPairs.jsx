@@ -87,7 +87,7 @@ function generateBoard(totalCells) {
 }
 
 const MatchingPairs = () => {
-    const [totalCells, setTotalCells] = useState(0) 
+    const [totalCells, setTotalCells] = useState(16) 
     const [clickCount, setClickCount] = useState(0);
     const [cells, setCells] = useState(generateBoard(totalCells)); // ✅ board is stable
     const [flipped, setFlipped] = useState([]);
@@ -158,9 +158,9 @@ const MatchingPairs = () => {
                     <select 
                         onChange={(e) => setTotalCells(Number(e.target.value))}
                     >
-                        <option value="" disabled selected>Select the grid</option>
+                        <option value="" disabled>Select the grid</option>
                         <option value="4">2 x 2</option>
-                        <option value="16">4 x 4</option>
+                        <option value="16" selected>4 x 4</option>
                     </select>
                 </div>
             </div>
