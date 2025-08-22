@@ -33,7 +33,6 @@ import {
     Archive, 
     Award,
     Battery,
-    Bluetooth, 
     Book, 
     Bookmark, 
     Briefcase, 
@@ -50,6 +49,8 @@ import {
     Diamond,
     Droplet,
     Flag,
+    Train,
+    Leaf,
 } from "lucide-react";
 
 const allValues = [
@@ -80,7 +81,6 @@ const allValues = [
     <Archive />,
     <Award />,
     <Battery />,
-    <Bluetooth />,
     <Book />,
     <Bookmark />,
     <Briefcase />,
@@ -98,6 +98,8 @@ const allValues = [
     <Diamond />,
     <Flag />,
     <Droplet />,
+    <Train />,
+    <Leaf />,
 ];
 
 function generateBoard(totalCells) {
