@@ -12,6 +12,7 @@ import Footer from './components/footer/Footer.jsx';
 
 // games
 import TickTacToe from './games/tickTacToe/TickTacToe.jsx';
+import MatchingPairs from './games/matchingPairs/MatchingPairs.jsx';
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
       {
         path: 'tic-tac-toe',
         element: <><Space/><TickTacToe/><Footer /></>,
+      },
+      {
+        path: 'matching-pairs',
+        element: <><Space/><MatchingPairs/><Footer /></>,
       },
     ]
   },

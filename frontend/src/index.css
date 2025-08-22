@@ -50,6 +50,7 @@
     --accent-primary: #FFFFFF;
     --accent-hover: #CCCCCC;
 
+    --success-primary: hsl(90, 100%, 65%);
     --error-primary: hsl(0, 100%, 65%);
 
     /* ==================== fonts ==================== */

@@ -27,6 +27,7 @@ function Games() {
             tag_name: "Single Player",
             image: comingSoon,
             game_name: "Card Match",
+            href: "/game/matching-pairs",
             icon: <Hourglass />
         },
     ]

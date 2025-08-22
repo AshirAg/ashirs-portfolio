@@ -1,0 +1,134 @@
+.container{
+ text-align: center;
+}
+.board_section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-primary);
+    padding: var(--spacing-xl) 0;
+    border: none;
+    border-top: var(--border-width) solid var(--border-primary);
+    border-bottom: var(--border-width) solid var(--border-primary);
+}
+.board_container{
+    gap: var(--spacing-lg);
+}
+
+/* boards */
+.board{
+    display: grid;
+    gap: 0.5rem;
+    perspective: 100000px;
+    /* width: 100%; */
+    width: 400px;
+    aspect-ratio: 1/1;
+}
+.card{
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.4rem;
+    
+    position: relative;
+    transform-style: preserve-3d;
+    background-color: var(--bg-hover);
+    
+}
+.card.flipped{
+    transform: rotateY(180deg);
+}
+.card.matched{
+    background-color: var(--success-primary);
+    color: var(--bg-primary);
+}
+.front, .value{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+}
+.front{
+    transform: rotateY(0deg);    
+}
+.value{
+    transform: rotateY(180deg);
+}
+
+/* dashboard */
+
+.title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.title h1{
+    text-align: center;
+
+}
+.title a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-secondary);
+}
+.title a:hover{
+    color: var(--text-primary);
+}
+.title a.hide{
+    visibility: hidden;
+}
+
+.dashboard{
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    border: var(--border-width) solid var(--border-primary);
+    border-radius: 0.4rem;
+    margin-top: var(--spacing-xl);
+}
+.dashboard select{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-primary);
+    padding: var(--spacing-md);
+    width: 100%;
+    position: relative;
+}
+.dashboard select option{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--bg-primary);
+    border: var(--border-width) solid var(--border-primary);
+    outline: none;
+}
+
+@media (max-width: 600px) {
+    .dashboard{
+        width: 100%;
+    }
+    .board{
+        width: 100%;
+        aspect-ratio: 1/1;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .row{
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        gap: var(--spacing-sm);
+    }
+    .cells{
+        height: 100%;
+        width: 100%;
+    }
+}
