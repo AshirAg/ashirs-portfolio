@@ -165,7 +165,7 @@ const TickTacToe = () => {
                             });
                         }}
                     >
-                        Play Again
+                        Reset
                     </Button>
                 </div>
             </div>
