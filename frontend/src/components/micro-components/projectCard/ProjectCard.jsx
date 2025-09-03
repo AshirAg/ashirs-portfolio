@@ -39,6 +39,8 @@ function ProjectCard({
               icon={
                 item.label === "Open Source" ? (
                   <LuGithub />
+                ) : item.label === "Demo" ? (
+                  <LuLink />
                 ) : item.label === "Visit Site" ? (
                   <LuLink />
                 ) : null

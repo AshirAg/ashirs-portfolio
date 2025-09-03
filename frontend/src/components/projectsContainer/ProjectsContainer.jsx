@@ -16,7 +16,7 @@ function ProjectsContainer({ limit }) {
       stacks: ["React", "Tailwind", "Radix UI", "TypeScript"],
       buttons: [
         {
-          label: "Visit Site",
+          label: "Demo",
           href: "https://gym-website-topaz-eight.vercel.app/",
           target: "_blank",
         },
