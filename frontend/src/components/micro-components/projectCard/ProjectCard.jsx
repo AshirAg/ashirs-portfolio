@@ -3,6 +3,7 @@ import Tag from "../tag/Tag.jsx";
 import Button from "../button/Button.jsx";
 import { LuLink } from "react-icons/lu";
 import { LuGithub } from "react-icons/lu";
+import { LuGlobe } from "react-icons/lu";
 
 function ProjectCard({
   tag_name,
@@ -40,7 +41,7 @@ function ProjectCard({
                 item.label === "Open Source" ? (
                   <LuGithub />
                 ) : item.label === "Demo" ? (
-                  <LuLink />
+                  <LuGlobe />
                 ) : item.label === "Visit Site" ? (
                   <LuLink />
                 ) : null
