@@ -17,7 +17,7 @@ function ProjectsContainer({ limit }) {
       buttons: [
         {
           label: "Demo",
-          href: "https://gym-website-topaz-eight.vercel.app/",
+          href: "https://gym-website-preview-ashirag.vercel.app/",
           target: "_blank",
         },
         // {
