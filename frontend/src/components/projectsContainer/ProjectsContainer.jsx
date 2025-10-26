@@ -4,15 +4,36 @@ import jewelryEcommProjectImage from "../../assets/images/projects/jewelry-ecomm
 import hyropowerProjectImage from "../../assets/images/projects/hydropower.webp";
 import multiVendorEcommProjectImage from "../../assets/images/projects/multi-vendor-ecomm.webp";
 import gymWebsite from "../../assets/images/projects/gym-website.webp";
+import fitnessWebsite from "../../assets/images/projects/fitness-website.jpg";
 
 function ProjectsContainer({ limit }) {
   const projectData = [
     {
       tag_name: "solo",
+      image: fitnessWebsite,
+      project_name: "Fitness website",
+      project_description:
+        "Well designed website for fitness industry. With minimal, modern animations. Focused on frontend. Demo project.",
+      stacks: ["React", "Tailwind", "TypeScript"],
+      buttons: [
+        {
+          label: "Demo",
+          href: "https://gym-fitness-us-seven.vercel.app/",
+          target: "_blank",
+        },
+        // {
+        //   label: "Open Source",
+        //   href: "https://github.com/AshirAg/gym-website",
+        //   target: "_blank",
+        // },
+      ],
+    },
+    {
+      tag_name: "solo",
       image: gymWebsite,
       project_name: "Gym website",
       project_description:
-        "Modern and sleek designed website for gym with booking class and other general pages.",
+        "Modern and sleek designed website for gym with booking class and other general pages. Frontend focused. Demo project.",
       stacks: ["React", "Tailwind", "Radix UI", "TypeScript"],
       buttons: [
         {
@@ -32,7 +53,7 @@ function ProjectsContainer({ limit }) {
       image: jewelryEcommProjectImage,
       project_name: "Jewelry eCommerce",
       project_description:
-        "Fully functional jewelry eCommerce website with CMS, integrated payments and an admin dashboard.",
+        "Fully functional jewelry eCommerce website with CMS, integrated payments and an admin dashboard. Fully database & backend integrated.",
       stacks: [
         "MySQL",
         "PHP",
@@ -44,7 +65,9 @@ function ProjectsContainer({ limit }) {
       ],
       buttons: [
         {
-          label: "Coming soon ...",
+          label: "Demo",
+          href: "https://saranaura.in",
+          target: "_blank",
         },
       ],
     },
